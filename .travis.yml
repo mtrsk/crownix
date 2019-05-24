@@ -1,0 +1,5 @@
+language: nix
+script: nix-build release.nix -A project
+cache:
+  directories:
+  - $HOME/nix.store
