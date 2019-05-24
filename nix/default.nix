@@ -7,7 +7,7 @@ with nixpkgs;
 stdenv.mkDerivation {
   name = "my-app";
 
-  src = ./.;
+  src = ../src;
 
   buildInputs = [
     boost
@@ -20,7 +20,7 @@ stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/bin
-    cp waifu $out/bin/
+    cp main $out/bin/
   '';
 
   PORT = 10000;

@@ -1,8 +1,8 @@
 let
-  pkgs = import ./nixpkgs-from-json.nix {
-    json = ./nixpkgs.json;
+  pkgs = import ./nix/nixpkgs-from-json.nix {
+    json = ./nix/nixpkgs.json;
   };
 in
 {
-  project = pkgs.callPackage ./default.nix { };
+  project = pkgs.callPackage ./nix/default.nix {};
 }
