@@ -6,7 +6,17 @@ An experiment with C++, [crow](https://github.com/ipkn/crow) and [Nix](https://n
 
 ## Building the project
 
-```
-$ nix-build release.nix -A project
-$ ./result/bin/main
-```
+* With Nix
+
+    ```
+    $ nix-build release.nix -A project
+    $ ./result/bin/main
+    ```
+
+* With Docker
+
+    ```
+    $ docker image build -t crownix .
+    $ docker container run --rm -p 10000:10000 crownix
+    ```
+
