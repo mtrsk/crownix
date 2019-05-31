@@ -1,6 +1,10 @@
-FROM nixos/nix
+FROM nixos/nix:2.2.1
 
-WORKDIR /usr/share/crownix
+RUN useradd --create-home appuser
+
+WORKDIR /home/appuser
+
+USER appuser
 
 COPY . .
 
